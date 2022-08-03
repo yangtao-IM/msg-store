@@ -1,0 +1,16 @@
+syntax = "proto3";
+package msgstore;
+
+option go_package="github.com/yangtao-IM/msg-store/api/msgstore;msgstore";
+
+message SendMsgReq {
+    string value = 1;
+}
+
+message SendMsgRsp {
+    string value = 1;
+}
+
+service HelloService {
+    rpc Send(SendMsgReq) returns(SendMsgRsp){}
+}
